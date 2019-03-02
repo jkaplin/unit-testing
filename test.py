@@ -17,5 +17,6 @@ if (not os.path.isfile(expected)):
 else:
     copy_expected_to_true_out_file = "cp " + expected + " true_out"
     os.system(copy_expected_to_true_out_file)
-os.system("diff your_out true_out")
+print("                       YOUR PRINTOUT                          |                  EXPECTED PRINTOUT")
+os.system("diff -y your_out true_out")
 #diff trace
