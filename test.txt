@@ -1,0 +1,20 @@
+prototype_of_function()
+
+input expected_output
+input expected_output
+input expected_output
+input expected_output
+input expected_output
+
+(if expected_output is empty then it will print out "was this the expected output and if so then it will print SUCCESS")
+
+Example:
+
+char *ft_strchr(const char *str)
+
+"face" 
+
+
+How to run the script
+python3 test_return.py name_of_function_file.c
+
