@@ -1,0 +1,2085 @@
+void	*ft_memset(void *b, int c, size_t len);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+b = "testing" | c = 'X' | len = 3
+
+your_result: "XXXting"
+true_result: "XXXting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+b = "testing" | c = 'X' | len = 7
+
+your_result: "XXXXXXX"
+true_result: "XXXXXXX"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+b = "testing" | c = 'X' | len = 9
+
+your_result: "XXXXXXXXX"
+true_result: "XXXXXXXXX"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+b = "testing" | c = 'X' | len = 0
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+b = "" | c = 'X' | len = 3
+
+your_result: "XXX"
+true_result: "XXX"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_bzero(void *s, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | n = 3
+
+your_result: s = \0  \0  \0  t  i  n  g 
+true_result: s =  \0  \0  \0  t  i  n  g 
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | n = 7
+
+your_result: s = \0  \0  \0  \0  \0  \0  \0 
+true_result: s =  \0  \0  \0  \0  \0  \0  \0 
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | n = 9
+
+your_result: s = \0  \0  \0  \0  \0  \0  \0 
+true_result: s =  \0  \0  \0  \0  \0  \0  \0 
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | n = 0
+
+your_result: s = t  e  s  t  i  n  g 
+true_result: s =  t  e  s  t  i  n  g 
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | n = 3
+
+your_result: s =
+true_result: s = 
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | n = 3
+
+your_result: "abcting"
+true_result: "abcting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | n = 6
+
+your_result: "abcdefg"
+true_result: "abcdefg"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | n = 9
+
+your_result: "abcdef"
+true_result: "abcdef"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | n = 0
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "abcdef" | n = 3
+
+your_result: "abc"
+true_result: "abc"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | c = 'X' | n = 3
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | c = 'c' | n = 6
+
+your_result: "ting"
+true_result: "ting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | c = 'f' | n = 9
+
+your_result: "g"
+true_result: "g"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | c = 'a' | n = 0
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "abcdef" | c = 'f' | n = 3
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	*ft_memmove(void *dst, const void *src, size_t len);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | len = 3
+
+your_result: "abcting"
+true_result: "abcting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | len = 6
+
+your_result: "abcdefg"
+true_result: "abcdefg"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | len = 9
+
+your_result: "abcdef"
+true_result: "abcdef"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "abcdef" | len = 0
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "abcdef" | len = 3
+
+your_result: "abc"
+true_result: "abc"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "test" | src = "st" | len = 3
+
+your_result: "st"
+true_result: "st"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "st" | src = "test" | len = 3
+
+your_result: "tes"
+true_result: "tes"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	*ft_memchr(const void *s, int c, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 'X' | n = 3
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 's' | n = 6
+
+your_result: "sting"
+true_result: "sting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 'g' | n = 9
+
+your_result: "g"
+true_result: "g"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 't' | n = 0
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | c = 'f' | n = 3
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_memcmp(const void *s1, const void *s2, size_t n);- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing" | n = 3
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing" | n = 7
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing" | n = 9
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "" | n = 0
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "abcdef" | n = 3
+
+your_result: -97
+true_result: -97
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "tegt" | n = 5
+
+your_result: 12
+true_result: 12
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "t" | n = 1
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "ab" | s2 = "abcdef" | n = 0
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "abcdefg" | s2 = "abcdef" | n = 9
+
+your_result: 103
+true_result: 103
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "Chris" | s2 = "Chrisx" | n = 6
+
+your_result: -120
+true_result: -120
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "as" | s2 = "as" | n = 5
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+size_t	ft_strlen(const char *s);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing"
+
+your_result: 7
+true_result: 7
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing more"
+
+your_result: 12
+true_result: 12
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strdup(const char *s1);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing"
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing more"
+
+your_result: "testing more"
+true_result: "testing more"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strcpy(char *dst, const char *src);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "test"
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "test"
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "test" | src = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "game" | len = 3
+
+your_result: "gamting"
+true_result: "gamting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "test" | len = 2
+
+your_result: "te"
+true_result: "te"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "test" | src = "" | len = 7
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "test" | src = "" | len = 0
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "" | len = 0
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strcat(char *s1, const char *s2);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "game"
+
+your_result: "testinggame"
+true_result: "testinggame"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test"
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = ""
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "game" | n = 5
+
+your_result: "testinggame"
+true_result: "testinggame"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test" | n = 2
+
+your_result: "te"
+true_result: "te"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "" | n = 0
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "game" | dstsize = 3
+
+your_result: 7 (dst = "testing")
+true_result: 7 (dst = "testing")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "" | src = "test" | dstsize = 7
+
+your_result: 4 (dst = "test")
+true_result: 4 (dst = "test")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "test" | src = "" | dstsize = 0
+
+your_result: 0 (dst = "test")
+true_result: 0 (dst = "test")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "testing" | src = "this one" | dstsize = 0
+
+your_result: 8 (dst = "testing")
+true_result: 8 (dst = "testing")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "abc" | src = "ccc" | dstsize = 6
+
+your_result: 6 (dst = "abccc")
+true_result: 6 (dst = "abccc")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+dst = "abc" | src = "ccc" | dstsize = 10
+
+your_result: 6 (dst = "abcccc")
+true_result: 6 (dst = "abcccc")
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strchr(const char *s, int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 't'
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | c = 'i'
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test" | c = ' '
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strrchr(const char *s, int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | c = 't'
+
+your_result: "ting"
+true_result: "ting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | c = 'i'
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test" | c = ' '
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strstr(const char *haystack, const char *needle);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "t"
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "test"
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "ing"
+
+your_result: "ing"
+true_result: "ing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "stig"
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "" | needle = "test"
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "test" | needle = ""
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "t" | len = 1
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "stig" | len = 0
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "" | needle = "test" | len = 1
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "test" | needle = "" | len = 7
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "est" | len = 4
+
+your_result: "esting"
+true_result: "esting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+haystack = "testing" | needle = "est" | len = 3
+
+your_result: "(null)"
+true_result: "(null)"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_strcmp(const char *s1, const char *s2);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "test"
+
+your_result: 105
+true_result: 105
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "ing"
+
+your_result: 11
+true_result: 11
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "stig"
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test"
+
+your_result: -116
+true_result: -116
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = ""
+
+your_result: 116
+true_result: 116
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing" | n = 4
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "test" | n = 5
+
+your_result: 105
+true_result: 105
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "ing" | n = 9
+
+your_result: 11
+true_result: 11
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "stig" | n = 0
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test" | n = 1
+
+your_result: -116
+true_result: -116
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "" | n = 5
+
+your_result: 116
+true_result: 116
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "" | n = 0
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "" | n = 0
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_atoi(const char *str);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "testing"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "123"
+
+your_result: 123
+true_result: 123
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "   -0456"
+
+your_result: -456
+true_result: -456
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "  + 789"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "915	423"
+
+your_result: 915
+true_result: 915
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "+-234"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "2147483647"
+
+your_result: 2147483647
+true_result: 2147483647
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "-2147483648"
+
+your_result: -2147483648
+true_result: -2147483648
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "-2147483649"
+
+your_result: 2147483647
+true_result: 2147483647
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+str = "2147483648"
+
+your_result: -2147483648
+true_result: -2147483648
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_isalpha(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'a'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'z'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'A'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'Z'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '&'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '7'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_isdigit(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'a'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '0'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '9'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '&'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_isalnum(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'a'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'z'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'A'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'Z'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '&'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '7'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_isascii(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ''
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'A'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'ÿ'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '€'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '–'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_isprint(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '('
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '~'
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ''
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '''
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ''
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'ÿ'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'ô'
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_toupper(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'a'
+
+your_result: 'A'
+true_result: 'A'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'z'
+
+your_result: 'Z'
+true_result: 'Z'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'A'
+
+your_result: 'A'
+true_result: 'A'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'Z'
+
+your_result: 'Z'
+true_result: 'Z'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: ' '
+true_result: ' '
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '&'
+
+your_result: '&'
+true_result: '&'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_tolower(int c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'a'
+
+your_result: 'a'
+true_result: 'a'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'z'
+
+your_result: 'z'
+true_result: 'z'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'A'
+
+your_result: 'a'
+true_result: 'a'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = 'Z'
+
+your_result: 'z'
+true_result: 'z'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = ' '
+
+your_result: ' '
+true_result: ' '
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+c = '&'
+
+your_result: '&'
+true_result: '&'
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	*ft_memalloc(size_t size);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 3
+
+your_result: [0, 0, 0]
+true_result: [0, 0, 0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 9
+
+your_result: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+true_result: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 0
+
+your_result: []
+true_result: []
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_memdel(void **ap);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*ap = "test"
+
+your_result: *ap = NULL
+true_result: *ap = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*ap = "testing"
+
+your_result: *ap = NULL
+true_result: *ap = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*ap = ""
+
+your_result: *ap = NULL
+true_result: *ap = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*ap = NULL
+
+your_result: *ap = NULL
+true_result: *ap = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strnew(size_t size);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 3
+
+your_result: [0, 0, 0, 0]
+true_result: [0, 0, 0, 0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 9
+
+your_result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+true_result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+size = 0
+
+your_result: [0]
+true_result: [0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_strdel(char **as);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*as = "test"
+
+your_result: *as = NULL
+true_result: *as = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*as = "testing"
+
+your_result: *as = NULL
+true_result: *as = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*as = ""
+
+your_result: *as = NULL
+true_result: *as = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*as = NULL
+
+your_result: *as = NULL
+true_result: *as = NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_strclr(char *s);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: s = [0, 0, 0, 0, 0]
+true_result: s = [0, 0, 0, 0, 0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: s = [0]
+true_result: s = [0]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_striter(char *s, void (*f)(char *));
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: s = [*, *, *, *]
+true_result: s = [*, *, *, *]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: s = [u, f, t, u]
+true_result: s = [u, f, t, u]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: s = [T, E, S, T]
+true_result: s = [T, E, S, T]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+your_result: s = [a,  , Ÿ, >, Ý, |, , º, Y, ø, —, 6, Õ, t, , ², Q, ð, , ., Í, l, , ª, I, è, ‡, &, Å, d, , ¢, A, à, , , ½, \, û, š, 9, Ø, w, , µ, T, ó, ’, 1, Ð, o, ]
+true_result: s = [a,  , Ÿ, >, Ý, |, , º, Y, ø, —, 6, Õ, t, , ², Q, ð, , ., Í, l, , ª, I, è, ‡, &, Å, d, , ¢, A, à, , , ½, \, û, š, 9, Ø, w, , µ, T, ó, ’, 1, Ð, o, ]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: s = []
+true_result: s = []
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing"
+
+your_result: s = [0, 1, 2, 3, 4, 5, 6]
+true_result: s = [0, 1, 2, 3, 4, 5, 6]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing"
+
+your_result: s = [t, f, u, w, m, s, m]
+true_result: s = [t, f, u, w, m, s, m]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing a bit more"
+
+your_result: s = [T, e, s, T, i, n, G,  , a,  , b, i, T,  , m, O, r, e]
+true_result: s = [T, e, s, T, i, n, G,  , a,  , b, i, T,  , m, O, r, e]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing"
+
+your_result: s = [t, e, s,  , i, n, g]
+true_result: s = [t, e, s,  , i, n, g]
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: s = []
+true_result: s = []
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strmap(char const *s, char (*f)(char));
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "****"
+true_result: "****"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "uftu"
+true_result: "uftu"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "TEST"
+true_result: "TEST"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+your_result: "abcdefghijklmnopqr"
+true_result: "abcdefghijklmnopqr"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "abcd"
+true_result: "abcd"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "tfuw"
+true_result: "tfuw"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test"
+
+your_result: "TFUW"
+true_result: "TFUW"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_strequ(const char *s1, const char *s2);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing"
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "test"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "inga" | s2 = "ing"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "stig"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test"
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = ""
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = ""
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "testing" | n = 4
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "test" | n = 5
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "ing" | n = 9
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "stig" | n = 0
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test" | n = 1
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "" | n = 5
+
+your_result: 0
+true_result: 0
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = "" | n = 0
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "" | n = 0
+
+your_result: 1
+true_result: 1
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing this Sub Sandwitch" | start = 13 | len = 8
+
+your_result: "Sub Sand"
+true_result: "Sub Sand"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing this Sub Sandwitch" | start = 17 | len = 4
+
+your_result: "Sand"
+true_result: "Sand"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing this Sub Sandwitch" | start = 21 | len = 5
+
+your_result: "witch"
+true_result: "witch"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing this Sub Sandwitch" | start = 21 | len = 9
+
+your_result: "witch"
+true_result: "witch"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "test" | start = 0 | len = 0
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 1 | len = 0
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 10 | len = 1
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 0 | len = 6
+
+your_result: "testin"
+true_result: "testin"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 3 | len = 7
+
+your_result: "ting"
+true_result: "ting"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 7 | len = 1
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing" | start = 1 | len = 0
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strjoin(char const *s1, char const *s2);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "testing" | s2 = "game"
+
+your_result: "testinggame"
+true_result: "testinggame"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = "test"
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "test" | s2 = ""
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s1 = "" | s2 = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_strtrim(char const *s);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing"
+
+your_result: "testing"
+true_result: "testing"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = ""
+
+your_result: ""
+true_result: ""
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "   test      "
+
+your_result: "test"
+true_result: "test"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "  t  e  s  t   "
+
+your_result: "t  e  s  t"
+true_result: "t  e  s  t"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "te               st
+"
+
+your_result: "te               st"
+true_result: "te               st"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "
+    check	this    	"
+
+your_result: "check	this"
+true_result: "check	this"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	**ft_strsplit(char const *s, char c);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing the split" | c = ' '
+
+your_result[0]: "testing"
+true_result[0]: "testing"
+
+your_result[1]: "the"
+true_result[1]: "the"
+
+your_result[2]: "split"
+true_result[2]: "split"
+
+your_result[3]: NULL
+true_result[3]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing the split" | c = 't'
+
+your_result[0]: "es"
+true_result[0]: "es"
+
+your_result[1]: "ing "
+true_result[1]: "ing "
+
+your_result[2]: "he spli"
+true_result[2]: "he spli"
+
+your_result[3]: NULL
+true_result[3]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "testing the split" | c = 'i'
+
+your_result[0]: "test"
+true_result[0]: "test"
+
+your_result[1]: "ng the spl"
+true_result[1]: "ng the spl"
+
+your_result[2]: "t"
+true_result[2]: "t"
+
+your_result[3]: NULL
+true_result[3]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | c = ' '
+
+your_result[0]: NULL
+true_result[0]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "" | c = ' '
+
+your_result[0]: NULL
+true_result[0]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "a" | c = 't'
+
+your_result[0]: "a"
+true_result[0]: "a"
+
+your_result[1]: NULL
+true_result[1]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "    " | c = ' '
+
+your_result[0]: NULL
+true_result[0]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "a   a   a" | c = ' '
+
+your_result[0]: "a"
+true_result[0]: "a"
+
+your_result[1]: "a"
+true_result[1]: "a"
+
+your_result[2]: "a"
+true_result[2]: "a"
+
+your_result[3]: NULL
+true_result[3]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+s = "a   a   a" | c = 'a'
+
+your_result[0]: "   "
+true_result[0]: "   "
+
+your_result[1]: "   "
+true_result[1]: "   "
+
+your_result[2]: NULL
+true_result[2]: NULL
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
+char	*ft_itoa(int n);
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n = "2345"
+
+your_result: "2345"
+true_result: "2345"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n = "0"
+
+your_result: "0"
+true_result: "0"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n = "-543"
+
+your_result: "-543"
+true_result: "-543"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n = "-2147483648"
+
+your_result: "-2147483648"
+true_result: "-2147483648"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+n = "2147483647"
+
+your_result: "2147483647"
+true_result: "2147483647"
+
+- > ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ [32m SUCCESS [0m
+- > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > [1;4;32m PERFECT [0m
