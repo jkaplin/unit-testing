@@ -1,0 +1,5 @@
+to know the return result of the funtion from this:
+cc -fPIC -shared -o libfun.so function.c
+which creates a shared library libfun.so
+and from that I can call the function in python and get the resul back and compare that to the expected result
+and to check the printing of the program with the expected printing
